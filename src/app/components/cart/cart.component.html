@@ -1,0 +1,14 @@
+<a [routerLink]="['/home']" class="back">Go Back</a>
+
+<div class="products">
+  <div *ngFor='let product of cart' class="product">
+    <a class="link" [routerLink]="['/products', product.id]">
+      <img class="img" [src]="product.image" [alt]="product.title">
+    </a>
+    <a [routerLink]="['/products', product.id]" class="title">{{ product.title }}...</a>
+    <h3 class="price">{{ product.price }}</h3>
+    <button class="buy" (click)="buy(product)">Buy Now</button>
+    <button class="remove" (click)="remove(product.id)">Remove</button>
+  </div>
+</div>
+

@@ -1,0 +1,52 @@
+<button mat-raised-button color="primary" class="back" [routerLink]="['/products']">Go Back</button>
+
+<div class="product">
+  <img class="img" [src]="product.image" [alt]="product.title">
+  <h4 class="category">{{ product.category }}</h4>
+  <h1 class="title">{{ product.title }}</h1>
+  <p class="description">{{ product.description }}</p>
+  <h3 class="price">{{ product.price }}</h3>
+  <button mat-raised-button color="primary" class="buy" (click)="buyProduct()">Buy It Now</button>
+  <button mat-raised-button class="cart" (click)="addToCart()">Add to Cart</button>
+
+  <form class="form" (ngSubmit)="addReview()">
+    <img
+      src="https://capenetworks.com/static/images/testimonials/user-icon.svg"
+      class="user-icon-input">
+    <mat-form-field class="review-title-container">
+      <mat-label>Review title</mat-label>
+      <input matInput
+        class="comment-title-input"
+        maxlength="50"
+        [(ngModel)]="title"
+        [ngModelOptions]="{standalone: true}"
+        placeholder="Write a title for your review"
+        required />
+    </mat-form-field>
+    <mat-form-field class="review-description-container" appearance="outline">
+      <mat-label
+        style="margin-top:10px"
+      >Review Description</mat-label>
+      <textarea matInput
+        class="comment-description-input"
+        name="description"
+        maxlength="250"
+        [(ngModel)]="description"
+        [ngModelOptions]="{standalone: true}"
+        placeholder="Write a description for your review"
+        required></textarea>
+    </mat-form-field>
+    <div class="buttons">
+      <button mat-raised-button color='primary' type="submit" class='submit'>Submit</button>
+      <button mat-raised-button type="reset" class="reset">Reset</button>
+    </div>
+  </form>
+
+  <div class="comment" *ngFor="let comment of comments">
+    <img
+      src="https://capenetworks.com/static/images/testimonials/user-icon.svg"
+      class="user-icon-comment">
+    <h1 class="comment-title">{{ comment.title }}</h1>
+    <p class="comment-description">{{ comment.description }}</p>
+  </div>
+</div>

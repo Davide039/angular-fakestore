@@ -1,0 +1,13 @@
+<div class="header">
+  <button mat-raised-button color="primary" class="back" [routerLink]="['/home']">Go Back</button>
+</div>
+
+<div class="products">
+  <div *ngFor='let product of products' class="product">
+    <a class="link" [routerLink]="['/products', product.id]">
+      <img class="img" [src]="product.image" [alt]="product.title">
+    </a>
+    <a [routerLink]="['/products', product.id]" class="title">{{ product.title }}...</a>
+    <h3 class="price">{{ product.price }}</h3>
+  </div>
+</div>

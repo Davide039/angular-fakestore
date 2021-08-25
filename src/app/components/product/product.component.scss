@@ -1,0 +1,162 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.product {
+  margin: 50px 0px;
+
+  .img {
+    width: 300px;
+    height: auto;
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+
+  .category {
+    color: white;
+    width: 150px;
+    text-align: center;
+    background-color: green;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin-left: 80px;
+    margin-top: 20px;
+  }
+
+  .title {
+    color: #70cbff;
+    margin-left: 20px;
+    word-wrap: break-word;
+    width: 320px;
+    text-align: center;
+  }
+
+  .description {
+    color: #022f40;
+    margin-left: 20px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    text-align: center;
+    width: 320px;
+  }
+
+  .price {
+    color: #022f40;
+    margin-left: 20px;
+    font-weight: 570;
+    text-align: center;
+    width: 300px;
+
+    &::before {
+      content: "$";
+    }
+  }
+
+  .buy {
+    margin: 0 10px 10px 72px;
+  }
+
+  .cart {
+    margin: -10px 10px 10px 0;
+  }
+
+  .form {
+    display: grid;
+    grid-template-rows: 50px 1fr 50px;
+    grid-template-columns: 65px 1fr;
+    margin: 80px 0 0 20px;
+
+    .review-title-container {
+      min-width: 275px;
+      max-width: 275px;
+    }
+    
+    .review-description-container {
+      margin-top: 10px;
+      margin-bottom: -1.25rem;
+      min-width: 340px;
+      max-width: 340px;
+      padding-right: 10px;
+
+      .comment-description-input {
+        resize: none;
+        padding-right: 10px;
+      }
+    }
+
+    .user-icon-input {
+      width: 50px;
+      height: 50px;
+      display: block;
+    }
+
+    .comment-title-input {
+      font-size: 16px;
+      height: 30px;
+      margin-top: -5px;
+    }
+
+    .comment-description-input {
+      font-size: 14px;
+      font-family: sans-serif;
+      padding: 5px 10px;
+      height: 300px;
+      margin-top: 20px;
+    }
+
+    .buttons {
+      margin-top: 15px;
+      width: 340px;
+      grid-row-start: 3;
+      grid-row-end: 5;
+
+      .submit {
+        margin-right: 20px;
+        width: 160px;
+      }
+
+      .reset {
+        width: 160px;
+      }
+    }
+  }
+
+  .comment {
+    display: grid;
+    grid-template-rows: 27px 1fr;
+    grid-template-columns: 65px 1fr;
+    margin-left: 20px;
+    margin-top: 30px;
+
+    .user-icon-comment {
+      width: 50px;
+      height: 50px;
+      display: block;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      margin-top: 15px;
+    }
+
+    .comment-title {
+      margin-top: 12px;
+      font-size: 18px;
+      word-wrap: break-word;
+      width: 330px;
+      font-weight: 450;
+    }
+
+    .comment-description {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      margin-left: 67px;
+      word-wrap: break-word;
+      width: 330px;
+      line-height: 1.5;
+      margin-top: 15px;
+    }
+  }
+}
+
+.back {
+  position: absolute;
+  top: 50px;
+  left: 10px;
+}
